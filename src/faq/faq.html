@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../img/opa.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body class="home">
+    <!--NavBar Section-->
+    <nav class="navbar navbar-default navbar-static-top ">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                        
+            <img src="../img/opa-removebg-preview.png" alt="OpaSocial" title="" width="70" height="50"> OpaSocial
+                        </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li  >
+                <a href="../index.html" >
+                  <i class="navbar-icon fas fa-sign-in-alt"></i>                Sign in
+                </a>
+              </li>
+                          <li >
+                <a href="./signup.html" >
+                  <i class="navbar-icon fas fa-address-card"></i>                Sign up
+                </a>
+              </li>
+                          <li >
+                <a href="../terms/terms.html" >
+                  <i class="navbar-icon fas fa-window-restore"></i>                Terms
+                </a>
+              </li>
+                          <li >
+                <a href="../howitwork/hwitwork.html" >
+                  <i class="navbar-icon fas fa-question-circle"></i>                HOW IT WORKS
+                </a>
+              </li>
+                          <li >
+                <a href="services.html" >
+                  <i class="navbar-icon fas fa-server"></i>                Services
+                </a>
+              </li>
+                          <li >
+                <a href="blog.html" >
+                  <i class="navbar-icon fab fa-blogger"></i>                Blog
+                </a>
+              </li>
+                          <li >
+                <a href="contact.html" >
+                  <i class="navbar-icon fas fa-phone-square"></i>         Contact
+                </a>
+              </li>
+                        </ul>
+          </div>
+        </div>
+     </nav>
+    
+     <!--Main Content on FAQs-->
+
+     <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="well ">
+                        <div class="panel-group faq" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"><span class="glyphicon glyphicon-chevron-down"></span> What is Partial status?</a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p>
+                        Partial Status is when we partially refund the remains of an order. Sometimes for some reasons we are unable to deliver a full order, so we refund you the remaining undelivered amount. Example: You bought an order with quantity 10 000 and charges 10$, let's say we delivered 9 000 and the remaining 1 000 we couldn't deliver, then we will "Partial" the order and refund you the remaining 1 000 (1$ in this example).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-chevron-down"></span>  What is Drip Feed?</a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Drip Feed is a service that we are offering so you would be able to put the same order multiple times automatically. Example: let's say you want to get 1000 likes on your Instagram Post but you want to get 100 likes each 30 minutes, you will put Link: Your Post Link Quantity: 100 Runs: 10 (as you want to run this order 10 times, if you want to get 2000 likes, you will run it 20 times, etc…) Interval: 30 (because you want to get 100 likes on your post each 30 minutes, if you want each hour, you will put 60 because the time is in minutes) P.S: Never order more quantity than the maximum which is written on the service name (Quantity x Runs), Example if the service's max is 4000, you don’t put Quantity: 500 and Run: 10, because total quantity will be 500x10 = 5000 which is bigger than the service max (4000). Also never put the Interval below the actual start time (some services need 60 minutes to start, don’t put Interval less than the service start time or it will cause a fail in your order).</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-chevron-down"></span> How do I use mass order?</a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>You put the service ID followed by | followed by the link followed by | followed by quantity on each line To get the service ID of a service please check here: https://bulkfollows.com/services Let’s say you want to use the Mass Order to add Instagram Followers to your 3 accounts: abcd, asdf, qwer From the Services List @ https://bulkfollows.com/services, the service ID for this service “Instagram Followers [15K] [REAL] ⚡️💧⭐” is 102 Let’s say you want to add 1000 followers for each account, the output will be like this: ID|Link|Quantity or in this example: 102|abcd|1000 102|asdf|1000 102|qwer|1000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><span class="glyphicon glyphicon-chevron-down"></span> I want a panel like yours / I want to resell your services how?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>To get a panel like ours, please check https://goo.gl/kgwJxX to rent a panel, and then you can connect to us via API easily!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><span class="glyphicon glyphicon-chevron-down"></span> Cancel button / Refill button is not working for me?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>The cancel or refill button sends a trigger to cancel or refill an order, it doesn't work instantly, it's just a trigger, sometimes it's too late to stop an order, and sometimes an order might not need refill.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><span class="glyphicon glyphicon-chevron-down"></span>  Can i get a discount?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>We do not offer any discount, the prices that you see are the prices that you get!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse7"><span class="glyphicon glyphicon-chevron-down"></span>   When can you activate my paypal?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>You can use Paypal whenever you want by following the instructions in the Add Funds page (manual use) To have it automatically enabled, you have to have added at least 100$ in your account, and then you can send us a ticket with your username to enable it for you!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse8"><span class="glyphicon glyphicon-chevron-down"></span>   Does drip feed work with mass order / or with API?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Drip Feed doesn't work with neither "Mass Order" nor API.</p>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+             
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="well ">
+                <div class="panel-group faq" id="accordion1">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse9"><span class="glyphicon glyphicon-chevron-down"></span>   Do you accept Paytm? </a>
+                    </h4>
+                  </div>
+                  <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Yes, we do accept PAYTM!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse10"><span class="glyphicon glyphicon-chevron-down"></span>    How to get youtube comment link? </a>
+                    </h4>
+                  </div>
+                  <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Find the timestamp that is located next to your username above your comment (for example: "3 days ago") and hover over it then right click and "Copy Link Address". The link will be something like this: https://www.youtube.com/watch?v=12345&lc=a1b21etc instead of just https://www.youtube.com/watch?v=12345 To be sure that you got the correct link, paste it in your browser's address bar and you will see that the comment is now the first one below the video and it says "Highlighted comment".</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse11"><span class="glyphicon glyphicon-chevron-down"></span>    Which youtube view service can be used with monetizable video? </a>
+                    </h4>
+                  </div>
+                  <div id="collapse11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>The one that has "Monetized" in its service' name.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse12"><span class="glyphicon glyphicon-chevron-down"></span>    What is "Instagram mentions", how do you use it?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Instagram Mention is when you mention someone on Instagram (example @abcde this means you have mentioned abcde under this post and abcde will receive a notification to check the post). Basically the Instagram Mentions [User Followers], you put the link of your post, and the username of the person that you want us to mention HIS FOLLOWERS!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse13"><span class="glyphicon glyphicon-chevron-down"></span>    What is "Instagram impressions"?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse13" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Impression means reach (also how many users have seen your post) it is mostly used with brands, they will ask you to show them statistic of the impressions your posts have.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse14"><span class="glyphicon glyphicon-chevron-down"></span>    The link must be added before the user goes live or after?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse14" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>After he goes live, or just 5 second before he goes!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse15"><span class="glyphicon glyphicon-chevron-down"></span>    What is VIP service?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse15" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>VIP Support For 30 (60 or 180 Days) We Will Answer Your Tickets Have You On Skype And Have Your Phone Number For 24/7 Hours Priority VIP Support For Any Order Open A Ticket After You Purchase This Service And Send Order ID Quantity Must Be 1000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16"><span class="glyphicon glyphicon-chevron-down"></span>     What is "Instagram Saves", and what does it do?</a>
+                    </h4>
+                  </div>
+                  <div id="collapse16" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p>Instagram Saves is when a user saves a post to his history on Instagram (by pressing the save button near the like button). A lot of saves for a post increase its impression.</p>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+   <!--Footer Section-->
+    <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="social-footer">
+                  <li><a href="#"><span class="social-icon"><i class="fas fa-phone-alt"></i></span> support@bulkfollows.com</a></li>
+                  <li><a href="#"><span class="social-icon"><i class="fab fa-skype"></i></span> socialfollowerz </a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="footer-nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../index.html">Sign in</a></li>
+                  <li><a href="./signup.html">Sign up</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="api.html">Api</a></li>
+                 
+                  <li><a href="../about/about-us.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p>© Copyright 2021. All Rights Reserved by OpaSocial </p>
+              </div>
+              <div class="col-sm-6">
+                <ul class="footer-nav">
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js.js"></script>
+
+</body>
+</html>

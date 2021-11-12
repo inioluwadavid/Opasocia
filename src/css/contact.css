@@ -1,0 +1,39 @@
+#contact-page .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+  #contact-page .media .media-left {
+    margin-bottom: 15px;
+}
+    #contact-page .media .media-left i {
+    color: #fff;
+    font-size: 35px;
+}
+#contact-page .media .media-heading {
+    font-weight: 700;
+    color: #fff;
+}
+#contact-page .media .media-body p {
+    color: #fff;
+}
+#contact-page .media-left, #contact-page .media-right, #contact-page .media-body {
+    display: block;
+    text-align: center;
+    width: auto;
+}
+#contact-page .media .media-left i {
+    color: #fff;
+    font-size: 35px;
+}
+#contact-page .media {
+    margin-bottom: 35px;
+    padding: 25px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    min-height: 180px;
+}
+#contact-page {
+    padding: 80px 0;
+}

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChildPanel</title>
+    <link rel="shortcut icon" href="../img/opa.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body class="dashboard userside-d ">
+  <nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+                      <img src="../img/opa-removebg-preview.png" alt="OpaSocial" title="OpaSocial" > 
+                    </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left-block">
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                New Order <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="./index.html ">Single Order</a>
+                <a class="dropdown-item" href="./mass-order.html">Mass order</a>
+          </div>
+            </div>
+          </li>
+                           <li>
+            <a href="/services" >
+                              Services
+            </a>
+          </li>
+                             <li>
+            <a href="./topup-account.html" >
+                              Add funds
+            </a>
+          </li>
+              <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Orders History <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                             <a class="dropdown-item" href="./order.html">Orders</a>
+                             </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Support & Api <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                 <a class="dropdown-item" href="./ticket.html">Tickets</a>
+                    <a class="dropdown-item" href="./terms.html">Terms</a>
+                       <a class="dropdown-item" href="#">API</a>
+                 <a class="dropdown-item" href="#">Affiliates</a>
+                 </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Others <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" target="_blank">Vouchers </a>
+                <a class="dropdown-item" href="#">Giveaway</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-right-block">
+          
+          <li><a class="toggle" href="javascript:toggleMode();toggleMode2();"><span class="nav-icon" data-toggle="tooltip" data-placement="bottom" title="Day/Night"><i class="fa fa-moon"></i></span></a></li>
+          
+          <li><a href="./account.html" data-toggle="tooltip" data-placement="bottom" title="Account Setting"><span class="nav-icon"><img src="../img/settings.png"></span></a></li>
+                      <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="nav-icon"><img src="../img/user.png"></span> davidooo <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="./account.html">Account</a></li>
+              <li><a href="../index.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="wrapper" class="toggled">
+    <div id="sidebar-wrapper" class="sidebar-toggle">
+      <div class="side-back">
+        <div class="side-box">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/chart.png">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">48288890</h4>
+              <h5>Total Orders</h5>
+            </div>
+          </div>
+        </div>
+        <div class="side-box">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/dollar.png">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">$0.00</h4>
+              <h5>Current Balance</h5>
+            </div>
+          </div>
+          <a href="/addfunds" class="add-btn">Top Up Account</a>
+        </div>
+        <div class="side-box">
+          <button type="button" data-toggle="modal" data-target="#acc-status">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/1star.png">
+            </div>
+            
+            <div class="media-body">
+              <h4 class="media-heading">
+                                    NEW
+                                </h4>
+              <h5>Current Status</h5>
+            </div>
+           
+          </div>
+             </button>
+                     
+        </div>
+        <a href="./dashboard.html" class="side-link">Dashboard <i class="fas fa-chevron-right"></i></a>
+        <a href="./update.html" class="side-link">Updates <i class="fas fa-chevron-right"></i></a>
+        <a href="./childpanel.html" class="side-link">Child Panel <i class="fas fa-chevron-right"></i></a>
+        <a href="#" target="_blank" class="side-link">News <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <div id="page-wrapper">
+      <div class="inner-page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="left-info">
+                <a href="javascript:void(0);" class="toggle-menu"><i class="fas fa-bars"></i></a><h2 class="page-title">You are currently on: <span>Child panels</span></h2>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="right-info">
+                <h2 class="page-title">Welcome, <span>davidooo</span> Your balance is $0.00</h2>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Main variables *content* -->
+        <div class="container-fluid">
+
+<div class="row">
+  <div class="col-sm-6">
+          <div class="well child-panel-content ">
+              <div class="panel-group faq" id="accordion1">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse9" class="" aria-expanded="true"><span class="glyphicon glyphicon-chevron-down"></span>   What is child panel? </a>
+              </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse in" aria-expanded="true" style="">
+              <div class="panel-body">
+                <p>A child panel is a panel with a limited selection of features that is linked to one of your regular panels such as <a href="/">OpaSocials.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse10" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>        How much cost for a child panel? </a>
+              </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>It will cost you 19.99$ per month. Please note, you paying for panel, not for services, you have to pay for the services you will purchase from OpaSocials</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse11" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>    How long it will take to activate the child panel ? </a>
+              </h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>It will take 3-6 hrs to active your child panel if you changed your name server perfectly.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse12" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>    Do you need hosting for child panel ?</a>
+              </h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>No, for child panel you just need a domain and that's all.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse13" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>    I have domain, what i can do next ?</a>
+              </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>If you have domain, you can simply change your domain name server and point it to<br>
+                  <b>ns1.perfectdns.com</b>
+                  <b>ns2.perfectdns.com</b>
+                  <br>
+                  After you successfully changed the name server, you can submit a order for child panel
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse14" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>    How can i change name server for my domain?</a>
+              </h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>Its actually depend on your domain provider, if you go to your domain settings and choose custom DNS and enter the name server given by OpaSocials.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse15" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>    How to i connect child panel with OpaSocials?</a>
+              </h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>You can simply go to https://yourdomain.com/admin/settings/providers and you will find out option to connect your panel with OpaSocials. You can a key to connect your panel with OpaSocials. This key you will find out on settings of your OpaSocials account.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     How can i get refund for child panel if i am not interested to continue?</a>
+              </h4>
+            </div>
+            <div id="collapse16" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>Unfortunately refund not possible after we activate your child panel. But you can terminate your child panel any time by creating a ticket to us.</p>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16a" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     I want to change my child panel domain address, what i need to do ?</a>
+              </h4>
+            </div>
+            <div id="collapse16a" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>10.	You can simply, change your new domain name server and send to us your new domain address. We will replace your new domain with old domain. But, this change only possible for 1 time. </p>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16b" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     How can i activate affiliate on my child panel. </a>
+              </h4>
+            </div>
+            <div id="collapse16b" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>Unfortunately, there is no affiliate feature on child panel</p>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16c" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     How can i add payment gateway on our child panel? </a>
+              </h4>
+            </div>
+            <div id="collapse16c" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>You can visit https://yourdomain.com/admin/settings/payments - Add method - Choose Payment Method </p>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16d" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     How can i collect money from our customer ? </a>
+              </h4>
+            </div>
+            <div id="collapse16d" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>You customer will pay to your own payment gateway account, they are not paying to us. So, you don't have to worry about payment. Setup your own payment gateway, and collect payment from your customers </p>
+              </div>
+            </div>
+          </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse16e" class="collapsed" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down"></span>     If i connect our child panel with OpaSocials, is there any way customer will find out about OpaSocials?</a>
+              </h4>
+            </div>
+            <div id="collapse16e" class="panel-collapse collapse" aria-expanded="false">
+              <div class="panel-body">
+                <p>No, your customer will never know about OpaSocials.com. They will place order on your website and your order will automatically place to OpaSocials.com under your user account. </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+        </div>
+  <div class="col-sm-6">
+          <div class="well">
+      <form action="/child-panels" method="post">
+                  <div class="first">
+          <div class="form-group">
+            <label for="domain" class="control-label">Domain</label>
+            <input type="text" class="form-control" id="domain" name="CreateOrderForm[domain]"
+                   value="">
+          </div>
+          <div class="alert alert-info">
+  <div>Please visit your registrar's dashboard to change nameservers to:</div>
+  <ul style="padding-left: 20px">
+                  <li>ns1.perfectdns.com</li>
+                  <li>ns2.perfectdns.com</li>
+          </ul>
+</div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"
+                 for="createorderform-currency">Currency</label>
+          <select id="createorderform-currency" class="form-control" name="CreateOrderForm[currency]"
+                  aria-required="true">
+                          <option value="USD" >
+              United States Dollars (USD)
+            </option>
+                          <option value="RUB" >
+              Russian Rubles (RUB)
+            </option>
+                          <option value="THB" >
+              Thai Baht (THB)
+            </option>
+                          <option value="TRY" >
+              Turkish Lira (TRY)
+            </option>
+                          <option value="EUR" >
+              Euro (EUR)
+            </option>
+                          <option value="IDR" >
+              Indonesian Rupiah (IDR)
+            </option>
+                          <option value="BRL" >
+              Brazilian Real (BRL)
+            </option>
+                          <option value="CNY" >
+              Chinese Yuan (CNY)
+            </option>
+                          <option value="KRW" >
+              South Korean Won (KRW)
+            </option>
+                          <option value="INR" >
+              Indian Rupee (INR)
+            </option>
+                          <option value="IRR" >
+              Iranian Rial (IRR)
+            </option>
+                          <option value="SAR" >
+              Saudi Arabia Riyal (SAR)
+            </option>
+                          <option value="PLN" >
+              Polish złoty (PLN)
+            </option>
+                          <option value="MYR" >
+              Malaysian Ringgit (MYR)
+            </option>
+                          <option value="GBP" >
+              Pound sterling (GBP)
+            </option>
+                          <option value="KWD" >
+              Kuwaiti dinar (KWD)
+            </option>
+                          <option value="SEK" >
+              Swedish krona (SEK)
+            </option>
+                          <option value="ILS" >
+              Israeli shekel (ILS)
+            </option>
+                          <option value="HKD" >
+              Hong Kong dollar (HKD)
+            </option>
+                          <option value="NGN" >
+              Nigerian naira (NGN)
+            </option>
+                          <option value="KES" >
+              Kenyan shilling (KES)
+            </option>
+                          <option value="JPY" >
+              Japanese Yen (JPY)
+            </option>
+                          <option value="ARS" >
+              Argentine peso (ARS)
+            </option>
+                          <option value="VND" >
+              Vietnamese đồng (VND)
+            </option>
+                          <option value="CAD" >
+              Canadian dollar (CAD)
+            </option>
+                          <option value="IQD" >
+              Iraqi dinar (IQD)
+            </option>
+                          <option value="TWD" >
+              New Taiwan Dollars (TWD)
+            </option>
+                          <option value="AZN" >
+              Azerbaijani manat (AZN)
+            </option>
+                          <option value="BYN" >
+              Belarusian ruble (BYN)
+            </option>
+                          <option value="KZT" >
+              Kazakhstani tenge (KZT)
+            </option>
+                          <option value="UAH" >
+              Ukrainian hryvnia (UAH)
+            </option>
+                          <option value="RON" >
+              Romanian leu (RON)
+            </option>
+                          <option value="AED" >
+              United Arab Emirates dirham (AED)
+            </option>
+                          <option value="COP" >
+              Colombian peso (COP)
+            </option>
+                          <option value="PKR" >
+              Pakistan Rupee (PKR)
+            </option>
+                          <option value="EGP" >
+              Egyptian Pound (EGP)
+            </option>
+                        </select>
+        </div>
+        <div class="form-group">
+          <label class="control-label"
+                 >Admin username</label>
+          <input
+                 type="text"  class="form-control"
+                  aria-required="true"
+                 value="">
+        </div>
+        <div class="form-group">
+          <label class="control-label"
+                 >Admin password</label>
+          <input
+                 type="password"  class="form-control"
+                  aria-required="true">
+        </div>
+        <div class="form-group">
+          <label class="control-label"
+                 >Confirm password</label>
+          <input
+                 type="password"  class="form-control"
+                  aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="price" class="control-label">Price per month</label>
+          <input type="text" class="form-control" id="price" value="$19.99" readonly>
+        </div>
+        <input type="hidden" >
+        <button type="submit" class="btn btn-primary">Submit order</button>
+      </form>
+    </div>
+        </div>
+</div>
+</div>
+<div class="child-modal modal fade ticket-modal" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">ChildPanel</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row tab-row">
+        <div class="col-sm-4">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item active" role="presentation">
+              <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">1. How to buy a new domain name</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">2. How to update nameserver.</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">3. What is Lorem Ipsum?</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact" aria-selected="false">4. Why do we use it?</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-8">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade in active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <p><b>Step 1 </b></p>
+              <p>My List Of The Top FIVE domain registrars Website's<br></p>
+              <ol>
+                <li># <a href="https://www.domain.com" target="_blank"><font color="#0000ff">Domain.com</font></a></li>
+                <li># <a href="https://in.godaddy.com" target="_blank"><font color="#0000ff">Godaddy</font></a></li>
+                <li># <a href="http://www.hostgator.com" target="_blank"><font color="#0000ff">Hostgator</font></a></li>
+                <li># <a href="http://www.bluehost.com/‎" target="_blank"><font color="#0000ff">Bluehost</font></a></li>
+                <li># <a href="http://www.namecheap.com" target="_blank"><font color="#0000ff">Namecheap</font></a></li>
+              </ol>
+              <br>
+              <p><b>Lorem Ipsum </b></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <br>
+              <p>For more information: <a href="https://makeawebsitehub.com/reviews/domain-registrars/" target="_blank"><font color="#d1c5de">Click here</font></a></p>
+
+
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <p><b>Step 2 </b></p>
+              <p>How to update nameserver.</p>
+              <h6><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">1. Login to your Bluehost Control Panel.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">2. Click the</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">Domain</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">link, at the top of the page.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">3. Choose your</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">domain</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">name from the list of</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">domains</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">4. Then click the</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">Name Servers</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">tab.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">5. Select Use Custom</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">Nameservers</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">6. Enter the new</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">name servers</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">.<br></span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">7. Click Save</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><b style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">Nameserver</b><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">&nbsp;</span><span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;">Settings.</span></h6>
+              <br>
+              <p><b>Lorem Ipsum </b></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <br>
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <p><b>Lorem Ipsum </b></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <br>
+              <p><b>Lorem Ipsum </b></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            </div>
+            <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab">
+              <p><b>Lorem Ipsum </b></p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <br>
+              <p><b>Lorem Ipsum </b></p>
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+  
+<!-- Modal -->
+  <div class="modal fade" id="acc-status" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content modal-dialog-centered">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="modal-body">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item active" role="presentation">
+        <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-times-circle"></i> New</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="fa fa-times-circle"></i> Junior</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Regular</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Frequent</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Elite</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Vip</a>
+      </li>
+      <li class="nav-item " role="presentation">
+        <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Master</a>
+      </li>
+
+    </ul>
+    <p class="status-txt">current status</p>
+    <div class="status-row"></div>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade  in active" id="new" role="tabpanel" aria-labelledby="home-tab">
+        <div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">New</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+          <p class="status-link">========== Min. Spend 100$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Juniour</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+            <li>100$ Monthly Lottery for 5 random user  </li>
+            <li>Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Free Child panel lifetime</li>
+            <li>5-10% Discount Available</li>
+            <li>whatsapp support By Team</li>
+            <li>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane  fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Junior</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+        <p class="status-link">========== Spend More Than 1000$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Regular</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="acc-status-detail">
+             <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+                          <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li>Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li> Free Child panel lifetime</li>
+            <li>5-10% Discount Available</li>
+            <li>whatsapp support By Team</li>
+            <li>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane  fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Regular</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+      <p class="status-link">========== Spend More Than 2500$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Frequent</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="acc-status-detail">
+         <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Free Child panel lifetime</li>
+            <li>5-10% Discount Available</li>
+            <li>whatsapp support By Team</li>
+            <li>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="tab-pane fade " id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+  <div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Frequent</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+    <p class="status-link">========== Spend More Than 5000$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Elite</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+<div class="row">
+  <div class="col-sm-4">
+    <ul class="acc-status-detail">
+      <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i>Free Child panel lifetime</li>
+            <li>5-10% Discount Available</li>
+            <li>whatsapp support By Team</li>
+            <li>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+    </ul>
+  </div>
+</div>
+</div>
+<div class="tab-pane fad  e" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+<div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Elite</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+  <p class="status-link">========== Spend More Than 15000$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">VIP</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+<h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+<div class="row">
+<div class="col-sm-4">
+  <ul class="acc-status-detail">
+   <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>Free Child panel lifetime</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>5-10% Discount Available</li>
+            <li>whatsapp support By Team</li>
+            <li>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="tab-pane fade " id="vip" role="tabpanel" aria-labelledby="contact-tab">
+<div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">VIP</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+<p class="status-link">========== Spend More Than 50000$ To Get ==========></p>
+          <div class="next-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1stary.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Master</h4>
+                <p>Next Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+<h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+<div class="row">
+<div class="col-sm-4">
+<ul class="acc-status-detail">
+ <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>Free Child panel lifetime</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>5-10% Discount Available</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>whatsapp support By Team</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li>Eary Notification On new services</li>
+            <li>Hidden services</li>
+            <li>special Discount by the admnin </li>
+            <li>Support handle by the admin</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab-pane fade " id="master" role="tabpanel" aria-labelledby="contact-tab">
+<div class="dual-status">
+          <div class="current-status">
+            <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" src="../img/1star.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">Master</h4>
+                <p>Current Status</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+<h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+<div class="row">
+<div class="col-sm-4">
+<ul class="acc-status-detail">
+   <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus on Deposit</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i> Priority Ticket Support by Team </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>Free Child panel lifetime</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>5-40% Discount Available</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>whatsapp support By Team</li>
+           <li class="acc-status-li"><i class="fa fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i>Eary Notification On new services</li>
+             <li class="acc-status-li"><i class="fa fa-check-circle"></i>Hidden services</li>
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i>special Discount by the admnin </li>
+            <li class="acc-status-li"><i class="fa fa-check-circle"></i>Support handle by the admin</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+  <div class="modal fade" id="vipstatus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modal-dialog-centered">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-times-circle"></i> New</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="fa fa-times-circle"></i> Junior</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Regular</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Frequent</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Elite</a>
+          </li>
+          <li class="nav-item active" role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Vip</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="fa fa-times-circle"></i> Master</a>
+          </li>
+
+        </ul>
+        <p class="status-txt">current status</p>
+        <div class="status-row"></div>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li>whatsapp & support</li>
+                  <li>Free Child panel lifetime(website like our ) </li>
+                  <li>5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>5-40% Discount Available</li>
+                  <li>Vip Whatsapp / Calling Support</li>
+                  <li>100$ Montly Lottery for 5 random user</li>
+                  <li>Paypal manual/Auto accept </li>
+                  <li>Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li>5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>5-40% Discount Available</li>
+                  <li>Vip Whatsapp / Calling Support</li>
+                  <li>100$ Montly Lottery for 5 random user</li>
+                  <li>Paypal manual/Auto accept </li>
+                  <li>Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5-40% Discount Available</li>
+                  <li>Vip Whatsapp / Calling Support</li>
+                  <li>100$ Montly Lottery for 5 random user</li>
+                  <li>Paypal manual/Auto accept </li>
+                  <li>Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5-40% Discount Available</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                  <li>100$ Montly Lottery for 5 random user</li>
+                  <li>Paypal manual/Auto accept </li>
+                  <li>Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5-40% Discount Available</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                  <li>Paypal manual/Auto accept </li>
+                  <li>Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade in active" id="vip" role="tabpanel" aria-labelledby="contact-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i>5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5-40% Discount Available</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Paypal manual/Auto accept </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li>personal Assistance</li>
+                  <li>Eary Notification On new services</li>
+                  <li>Hidden services</li>
+                  <li>special Discount by the admnin </li>
+                  <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="master" role="tabpanel" aria-labelledby="contact-tab">
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 24/7 ticket support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> whatsapp & support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 5-40% Discount Available</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Paypal manual/Auto accept </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Best design for Chil</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> personal Assistance</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Eary Notification On new services</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Hidden services</li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> special Discount by the admnin </li>
+                  <li class="acc-status-li"><i class="fa fa-check-circle"></i> Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/jquery.sim.min.js.js"></script>
+<script src="../js/underscore.js"></script>
+<script src="../js/4etkgu7ilwdsbob4.js"></script>
+<script src="../js/wnzsoolloslhfumj.js"></script>
+<script src="../js/navbar-collapse.js"></script>
+<script src="../js/bootstrap.bundle.min.js.js"></script>
+
+<script>
+  $('.sidebar-pinner,#menu-toggle-2,.toggle-menu').click(function(e) {
+  $('#wrapper').toggleClass('toggled')
+  });
+  if ($(window).width() < 551) {
+  $('#wrapper').removeClass('toggled')
+  }
+</script>
+    <script>
+      $('.dashboard #navbar .navbar-left-block li .dropdown').hover(function(){  
+      //    $(this).toggleClass('open'); 
+      }); 
+      
+      $('ul.nav li.dropdown, .dashboard #navbar .navbar-left-block li .dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+      }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+      });
+    </script>
+</body>
+</html>

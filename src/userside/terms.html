@@ -1,0 +1,991 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms</title>
+    <link rel="shortcut icon" href="../img/opa.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="dashboard userside-d ">
+
+  <nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+                      <img src="../img/opa-removebg-preview.png" alt="OpaSocial" title="OpaSocial" > 
+                    </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left-block">
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                New Order <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="./index.html ">Single Order</a>
+                <a class="dropdown-item" href="./mass-order.html">Mass order</a>
+          </div>
+            </div>
+          </li>
+                                                                      <li>
+            <a href="/services" >
+                              Services
+            </a>
+          </li>
+                             <li>
+            <a href="./topup-account.html" >
+                              Add funds
+            </a>
+          </li>
+              <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Orders History <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="./order.html">Orders</a>
+                  </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Support & Api <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="./ticket.html">Tickets</a>
+                    <a class="dropdown-item" href="./terms.html">Terms</a>
+                                        <a class="dropdown-item" href="/api">API</a>
+                 <a class="dropdown-item" href="/affiliates">Affiliates</a>
+                 </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Others <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#" target="_blank">Vouchers </a>
+                <a class="dropdown-item" href="#">Giveaway</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-right-block">
+          
+          <li><a class="toggle" href="javascript:toggleMode();toggleMode2();"><span class="nav-icon" data-toggle="tooltip" data-placement="bottom" title="Day/Night"><i class="fa fa-moon"></i></span></a></li>
+          
+          <li><a href="./account.html" data-toggle="tooltip" data-placement="bottom" title="Account Setting"><span class="nav-icon"><img src="../img/settings.png"></span></a></li>
+                      <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="nav-icon"><img src="../img/user.png"></span> davidooo <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="./account.html">Account</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="wrapper" class="toggled">
+    <div id="sidebar-wrapper" class="sidebar-toggle">
+      <div class="side-back">
+        <div class="side-box">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/chart.png">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">48287718</h4>
+              <h5>Total Orders</h5>
+            </div>
+          </div>
+        </div>
+        <div class="side-box">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/dollar.png">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">$0.00</h4>
+              <h5>Current Balance</h5>
+            </div>
+          </div>
+          <a href="/addfunds" class="add-btn">Top Up Account</a>
+        </div>
+        <div class="side-box">
+          <button type="button" data-toggle="modal" data-target="#acc-status">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="../img/1star.png">
+            </div>
+            
+            <div class="media-body">
+              <h4 class="media-heading">
+                                    NEW
+                                </h4>
+              <h5>Current Status</h5>
+            </div>
+           
+          </div>
+             </button>
+                        
+        </div>
+        <a href="./dashboard.html" class="side-link">Dashboard <i class="fas fa-chevron-right"></i></a>
+        <a href="./update.html" class="side-link">Updates <i class="fas fa-chevron-right"></i></a>
+        <a href="./childpanel.html" class="side-link">Child Panel <i class="fas fa-chevron-right"></i></a>
+        <a href="#" target="_blank" class="side-link">News <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <div id="page-wrapper">
+      <div class="inner-page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="left-info">
+                <a href="javascript:void(0);" class="toggle-menu"><i class="fas fa-bars"></i></a><h2 class="page-title">You are currently on: <span>Terms</span></h2>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="right-info">
+                <h2 class="page-title">Welcome, <span>davidooo</span> Your balance is $0.00</h2>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <!-- Main variables *content* -->
+        <div class="container-fluid terms-page">
+        <div class="row tab-row">
+         <div class="col-sm-4">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item active" role="presentation">
+          <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">1. Delivery Policy</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">2. Services</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">3. Payment and Refund Policy</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact" aria-selected="false">4. Privacy Policy</a>
+        </li>
+      </ul>
+  </div>
+  <div class="col-sm-8">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade in active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <p><b>Terms - Delivery of Service </b></p>
+          <p>The use of services provided by Bulkfollows <b></b> Established the agreement to these terms.
+            By registering or using our services you agree that you have read and fully
+            understood the following terms of Service and Bulkfollows will not be help liable for loss in any way for users who have not read the below terms of service.</p>
+          <div id="delivery-policy">
+            <p><b>Delivery Policy </b></p>
+            <ul class="list-p">
+              <li>By placing an order with <b>Bulkfollows</b>, you automatically accept all the below-listed term of services whether you read them or not.</li>
+              <br>
+              <li>We reserve the right to change these terms of service without notice. You are expected to read all terms of service before placing every order to ensure you are up to date with any changes or any future changes.</li>
+              <br>
+              <li>You will only use the <b>Bulkfollows </b>website in a manner which follows all agreements made with <b>Soundcloud/Vine/Pinterest/Youtube/other social media</b> site on their individual Terms of Service page.</li>
+              <br>
+              <li><b>Bulkfollows </b>rates are subject to change at any time without notice. The terms stay in effect in the case of rate changes.</li>
+              <br>
+              
+              <li><b>Bulkfollows </b> does not guarantee a delivery time for any services as its depend on the services order quantity. We offer our best estimation for when the order will be delivered. This is only an estimation and <b>Bulkfollows </b>will not refund orders that are processing if you feel they are taking too long.</li>
+              <br>
+              <li><b>Bulkfollows </b>tries hard to deliver exactly what is expected of us by our resellers. In this case, we reserve the right to change a service type if we deem it necessary to complete an order.</li>
+              <br>
+               <p>Violate:<br> If We found any Unusual activity or if bulkfollows think you violating bulkfollows terms or harm bulkfollows business, in this point bulkfollows can stop doing business with any customer anytime. Unfortunately, for privcy of our business we will not able to share the reason sometime of closing your account or business with you. The decision will be Parmanent. You can use your remaining fund to order our services or you can ask for withdrawing your fund to your payment gateway you used for deposting the fund.</p>
+              <br>
+              <p>Disclaimer:<br> <b>Bulkfollows </b>will not be responsible for any damages you or your business may suffer.</p>
+              <br>
+              <p>Liabilities:<br> <b>Bulkfollows </b>is in no way liable for any account suspension or picture deletion done by YouTube or Soundcloud or Vine or Pinterest or Other Social Media.</p>
+            </ul>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div id="services">
+            <p><b>Services</b></p>
+            <ul class="list-p">
+
+              <li><b>Bulkfollows </b> <b></b> will only be used to promote your YouTube or Soundcloud or Vine or Pinterest or Social account and help boost your "Appearance" only.</li><br>
+              <li>We <b>DO NOT</b> guarantee your new followers will interact with you, we simply <b>guarantee </b>you to get the followers you pay for.</li><br>
+              <li>We <b>DO NOT</b> guarantee 100% of our accounts will have a profile picture, full bio and uploaded pictures, although we strive to make this the reality for all accounts.</li><br>
+              <li>You will not upload anything into the <b>Bulkfollows </b>site including nudity or any material that is not accepted or suitable for the YouTube or Soundcloud or Vine or Pinterest or Social Media community.<br><br></li>
+              <li><span style="font-weight: 700;">If your page had 100k+ followers/likes/views already before you order us, it will not cover refill protection, even if you order for refill server from us, as&nbsp;its&nbsp;not possible to understand from where you lost the followers/likes/views.&nbsp;<br><br></span></li>
+              <p></p>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <div id="refund-policy">
+            <p><b>Payment and Refund Policy</b></p>
+            <ul>
+            <li><p>In Bulkfollows You need to deposit credit or fund before you place or submit your order. We do accept major payment gateway such as VISA/Master Card, Webmoney, Perfectmoney, Payoneer, Payeer, Bitcoin, Paytm. You you need to sign up, go to add fund page, choose your payment gateway and deposit your credit. After Sucessful payment, your credit will be deposit automatically within 5 min to your account balance.</p></li>
+
+              <li><p>In Bulkfollows After deposit, if you would like to get refund the remaining balance, you can ask for refund to your payment gateway any time you want. We will refund to your payment gateway within 6-12 hrs. However, getting money to your card or bank depend on your local bank or card company.</p></li>
+
+
+              <li><p>If you file a dispute or charge-back against us after a deposit without any valid reason, we reserve the right to terminate all future orders, ban you from our site. We also reserve the right to take away any followers or likes we delivered to your or your client's Instagram/Facebook/Twitter or other social media account.</p></li>
+
+              <li><p>Orders placed in Bulkfollows, will be refunded or canceled if a customer requests for it.Y ou will receive a refund credit to your Bulkfollows account if the order is non-deliverable.</p></li>
+              
+              <li><p>If order's page or account username/URL/Link change, broken, remove or account get suspended for violate social media terms & condition, bulkfollows will not take resposibility for this and if order status completed, bulkfollows will not refund the order. </p></li>
+
+
+              <li><p>Misplaced or Private account orders will not qualify for a refund. Be sure to confirm each and every order before placing it.</p></li>
+
+              <li><p>Fraudulent activity such as using unauthorized or stolen credit cards will lead to termination of your account. There are no exceptions.</p></li>
+
+              <li><p>Please do not use more than one server at the same time for the same page. We cannot give you the correct followers/likes number in that case. We will not refund these orders.</p></li>
+            </ul>
+          </div>
+        </div>
+         <p><b>Affliate </b></p>
+          <p> Bulkfollows Offer 2% affliate commission for valid referral. It should be from your website, or You social media pages/channels or forum or through any kind of 3rd party ads. 
+            We don't accept friends as referral or you can not invite your self as a referral. Creating multiple account to get affliate comission can be reason of account suspension.</p>
+        <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab">
+          <div id="privacy-policy">
+            <p><b>Privacy Policy</b></p>
+            <p><br></p><p>HI THERE - WE RESPECT YOUR PRIVACY!</p><p>WE HATE PRIVACY BREACH AS MUCH AS YOU DO. BUT DURING THE TOTAL BUSINESS PROCESS WITH YOU, WE MIGHT NEED TO SHARE SOME OF YOUR DATA WITH THIRD PARTY. DETAILS OF OUR PRIVACY POLICY IS GIVEN BELOW. PLEASE NOTE THAT, BY PLACING ORDER WITH BULKFOLLOWS , YOU AGREE WITH OUR TERMS AND CONDITIONS AND PRIVACY POLICY. WE MIGHT CHANGE THE PRIVACY POLICY TIME TO TIME.<br></p><p><br></p><p><b>PLEASE READ THE FOLLOWING CAREFULLY BEFORE PROCEEDING TO USE BULKFOLLOWS:</b></p><p><b>Data Collection:</b></p><p>This document describes the official privacy policy of BulkFollows . The user is advised to read the privacy policy and ensure that he/she has no ambiguity with reference to any point of the Privacy Policy.</p><p>The user is informed that by visiting, using and continuing to use BulkFollows or subscribing to any package of the Services, it shall be presumed that the user has accepted all the points of the Privacy Policy. If you do not agree to the Privacy Policy, please do not use BulkFollows.com and the Services.<br></p><p><br></p><p><b>What information we collect:</b></p><p>We  might collect the following information from our user and use for the purpose of completing the transaction, job, and maintenance of our financial or strategic information:</p><p>• Name<br>• Business Name<br>• User name of the client’s social media account<br>• Email<br>• Phone number<br>• User preferences and history of internet use for optimization of the services by employing the cookies.</p><p><br></p><p><b>What are Cookies?</b></p><p>The cookies are a small piece of data consisting of a text-only string of information introduced by a particular website and are stored in the hard disk of the machine. They collect data relating to the browsing preferences and history, and such other information the user has provided to the website.</p><p><br></p><p><b>Our Cookies</b></p><p>Our cookies aim to give the user an optimal use of BulkFollows.com. The collected information is also used for general marketing and statistical analysis. Our cookies do not collect personal data of user. Some cookies are communicated to the user’s hard disk by the third party. BulkFollows has no affiliation with such party. BulkFollows disclaims any liability arising from such cookies. The client is advised to read the respective policy of the third party or block their entrance.<br></p><p><br></p><p><b>How to Stop Cookies</b></p><p>By default, the browsers are set to allow cookies. The user may opt to disable cookies if he/she does not want them to process in user’s machine by changing browser settings. It is also possible to configure browser setting allowing some and denying the others to have access to the user’s computer or set the browser to notify when a cookie knock. The ‘Ticket’ section of the browser may assist the user to manage the cookies preference.<br></p><p><br></p><p><b>Security and Confidentiality of the Information</b></p><p>BulkFollows  respect the privacy of the user. BulkFollows employs a sophisticated security system to make it sure that such information is within the trusted staff of BulkFollows  and uses it on the ‘need-to-know basis’. The payment-related information is encrypted with the help of the highly reliable technology SSL. BulkFollows has taken all the possible steps to safeguard the information relating to the user is safe. BulkFollows disclaims the liability in case of BulkFollows fails to maintain the security due to the cause beyond the reasonable control.<br></p><p><br></p><p><b>Modifications</b></p><p>BulkFollows may change, modify or amend the Privacy Policy at any time without prior notice. The amended version of Privacy Policy shall immediately be effective after it is posted on BulkFollows.com</p><p><br></p><p><br></p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+    </div>
+
+
+       </div>
+     </div>
+     </div>
+
+
+  
+      <!-- Modal -->
+      <div class="modal fade" id="acc-status" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content modal-dialog-centered">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item active" role="presentation">
+                <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-times-circle"></i> New</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-times-circle"></i> Junior</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Regular</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Frequent</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Elite</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Vip</a>
+              </li>
+              <li class="nav-item " role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Master</a>
+              </li>
+        
+            </ul>
+            <p class="status-txt">current status</p>
+            <div class="status-row"></div>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade  in active" id="new" role="tabpanel" aria-labelledby="home-tab">
+                <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">New</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="status-link">========== Min. Spend 100$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Juniour</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+              <div class="row">
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                    <li>100$ Monthly Lottery for 5 random user  </li>
+                    <li>Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Free Child panel lifetime</li>
+                    <li>5-10% Discount Available</li>
+                    <li>whatsapp support By Team</li>
+                    <li>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane  fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Junior</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+                <p class="status-link">========== Spend More Than 1000$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Regular</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul class="acc-status-detail">
+                     <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                                  <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li>Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li> Free Child panel lifetime</li>
+                    <li>5-10% Discount Available</li>
+                    <li>whatsapp support By Team</li>
+                    <li>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane  fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Regular</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+              <p class="status-link">========== Spend More Than 2500$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Frequent</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+          <div class="row">
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                 <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Free Child panel lifetime</li>
+                    <li>5-10% Discount Available</li>
+                    <li>whatsapp support By Team</li>
+                    <li>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade " id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Frequent</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+            <p class="status-link">========== Spend More Than 5000$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Elite</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <ul class="acc-status-detail">
+              <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+                    <li>5-10% Discount Available</li>
+                    <li>whatsapp support By Team</li>
+                    <li>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="tab-pane fad  e" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Elite</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+          <p class="status-link">========== Spend More Than 15000$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">VIP</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+        <div class="row">
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+           <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>5-10% Discount Available</li>
+                    <li>whatsapp support By Team</li>
+                    <li>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+          </ul>
+        </div>
+        </div>
+        </div>
+        <div class="tab-pane fade " id="vip" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">VIP</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+        <p class="status-link">========== Spend More Than 50000$ To Get ==========></p>
+                  <div class="next-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1stary.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Master</h4>
+                        <p>Next Status</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+        <div class="row">
+        <div class="col-sm-4">
+        <ul class="acc-status-detail">
+         <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>5-10% Discount Available</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>whatsapp support By Team</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li>Eary Notification On new services</li>
+                    <li>Hidden services</li>
+                    <li>special Discount by the admnin </li>
+                    <li>Support handle by the admin</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="tab-pane fade " id="master" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="dual-status">
+                  <div class="current-status">
+                    <div class="media">
+                      <div class="media-left media-middle">
+                        <img class="media-object" src="../img/1star.png">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Master</h4>
+                        <p>Current Status</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+        <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+        <div class="row">
+        <div class="col-sm-4">
+        <ul class="acc-status-detail">
+           <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Monthly Lottery for 5 random user</li>
+        
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>5-40% Discount Available</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>whatsapp support By Team</li>
+                   <li class="acc-status-li"><i class="far fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="acc-status-detail">
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i>Eary Notification On new services</li>
+                     <li class="acc-status-li"><i class="far fa-check-circle"></i>Hidden services</li>
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i>special Discount by the admnin </li>
+                    <li class="acc-status-li"><i class="far fa-check-circle"></i>Support handle by the admin</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+          </div>
+          <div class="modal fade" id="vipstatus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-dialog-centered">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="modal-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-times-circle"></i> New</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-times-circle"></i> Junior</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Regular</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Frequent</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Elite</a>
+                  </li>
+                  <li class="nav-item active" role="presentation">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Vip</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Master</a>
+                  </li>
+        
+                </ul>
+                <p class="status-txt">current status</p>
+                <div class="status-row"></div>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li>whatsapp & support</li>
+                          <li>Free Child panel lifetime(website like our ) </li>
+                          <li>5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>5-40% Discount Available</li>
+                          <li>Vip Whatsapp / Calling Support</li>
+                          <li>100$ Montly Lottery for 5 random user</li>
+                          <li>Paypal manual/Auto accept </li>
+                          <li>Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li>5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>5-40% Discount Available</li>
+                          <li>Vip Whatsapp / Calling Support</li>
+                          <li>100$ Montly Lottery for 5 random user</li>
+                          <li>Paypal manual/Auto accept </li>
+                          <li>Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                          <li>Vip Whatsapp / Calling Support</li>
+                          <li>100$ Montly Lottery for 5 random user</li>
+                          <li>Paypal manual/Auto accept </li>
+                          <li>Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                          <li>100$ Montly Lottery for 5 random user</li>
+                          <li>Paypal manual/Auto accept </li>
+                          <li>Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                          <li>Paypal manual/Auto accept </li>
+                          <li>Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade in active" id="vip" role="tabpanel" aria-labelledby="contact-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i>5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Paypal manual/Auto accept </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li>personal Assistance</li>
+                          <li>Eary Notification On new services</li>
+                          <li>Hidden services</li>
+                          <li>special Discount by the admnin </li>
+                          <li>Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="master" role="tabpanel" aria-labelledby="contact-tab">
+                    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> 100$ Montly Lottery for 5 random user</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Paypal manual/Auto accept </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Best design for Chil</li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul class="acc-status-detail">
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> personal Assistance</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Eary Notification On new services</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Hidden services</li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> special Discount by the admnin </li>
+                          <li class="acc-status-li"><i class="far fa-check-circle"></i> Support handle by the admin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+            
+        
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/moment.js"></script>
+        <script src="../js/jquery.sim.min.js.js"></script>
+        <script src="../js/underscore.js"></script>
+        <script src="../js/4etkgu7ilwdsbob4.js"></script>
+        <script src="../js/wnzsoolloslhfumj.js"></script>
+        <script src="../js/navbar-collapse.js"></script>
+        <script src="../js/bootstrap.bundle.min.js.js"></script>
+        
+        <script>
+          $('.sidebar-pinner,#menu-toggle-2,.toggle-menu').click(function(e) {
+          $('#wrapper').toggleClass('toggled')
+          });
+          if ($(window).width() < 551) {
+          $('#wrapper').removeClass('toggled')
+          }
+        </script>
+            <script>
+              $('.dashboard #navbar .navbar-left-block li .dropdown').hover(function(){  
+              //    $(this).toggleClass('open'); 
+              }); 
+              
+              $('ul.nav li.dropdown, .dashboard #navbar .navbar-left-block li .dropdown').hover(function() {
+              $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+              }, function() {
+              $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+              });
+            </script>
+        </body>
+        </html>
